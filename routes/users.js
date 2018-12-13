@@ -39,6 +39,9 @@ router.get('/:id', (req, res, next) => {
     .then((user) => {
       res.status(200).send(user[0])
     })
+    .catch((err) => {
+      next(err)
+    })
 })
 
 
