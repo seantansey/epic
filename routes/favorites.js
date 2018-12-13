@@ -2,21 +2,58 @@ var express = require('express')
 var router = express.Router()
 const knex = require('../knex')
 
-router.get('/favorites',(req, res) => {
-  // console.log(req.userCredentials);
+router.get('/', (req, res, next) => {
   return knex('favorites')
-    .innerJoin('users', 'favorites.users_id', 'users.id')
-    .innerJoin('trails', 'favorites.trails_id', 'trails.id')
-    .then((result) => {
-      res.status(200).send(result)
+    .innerJoin('users', 'favorites.user_id', 'users.id')
+    .innerJoin('trails', 'favorites.trail_id', 'trails.id')
+    .then((favorite) => {
+      res.status(200).send(favorite[0])
+    })
+    .catch((err) => {
+      next(err)
     })
 })
-// - Favorites
-//   - POST /api/favorites add a new favorite
-//   - GET /api/favorites Retrieve all favorites
-//   - GET /api/favorites/:id Retrieve a single favorite
-//   - DELETE /api/favorites/:id Delete an favorite
-//
+
+router.get('/:id', (req, res, next) => {
+  return knex('favorites')
+    .innerJoin('users', 'favorites.user_id', 'users.id')
+    .innerJoin('trails', 'favorites.trail_id', 'trails.id')
+    .where('favorites.id', req.params.id)
+    .then((result) => {
+      res.status(200).send(result[0])
+    })
+    .catch((err) => {
+      next(err)
+    })
+})
+
+router.post('/', (req, res, next) => {
+  return knex('favorites')
+  .insert({
+    trail_id: req.body.trailId,
+    user_id: 1
+  })
+  .returning(['id','trail_id','user_id'])
+  .then((result) => {
+    res.status(200).send(result[0])
+  })
+  .catch((err) => {
+    next(err)
+  })
+})
+
+router.delete('/:id', (req, res, next) => {
+  return knex('favorites')
+    .where('favorites.id', req.params.id)
+    .del()
+    .returning('*')
+    .then((result) => {
+      res.status(200).send(result[0])
+    })
+    .catch((err) => {
+      next(err)
+    })
+})
 
 
 module.exports = router
