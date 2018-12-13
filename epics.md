@@ -1,4 +1,5 @@
 # US Epics
+McKenzie River Trail
 
 Johnson Pass Trail, AK
 
