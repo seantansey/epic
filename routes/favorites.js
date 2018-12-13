@@ -1,3 +1,5 @@
+'use strict'
+
 var express = require('express')
 const jwt = require('jsonwebtoken')
 var router = express.Router()
