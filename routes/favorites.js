@@ -1,8 +1,27 @@
 var express = require('express')
+const jwt = require('jsonwebtoken')
 var router = express.Router()
 const knex = require('../knex')
+const key = process.env.JWT_KEY
 
-router.get('/', (req, res, next) => {
+const verify = function(req, res, next) {
+  jwt.verify(req.cookies.token, key, (err, decoded) => {
+    if (err) {
+      next({
+        status: 401,
+        message: 'Unauthorized'
+      })
+    }
+    else {
+      req.userCredentials = decoded
+
+      // console.log(req.userCredentials);
+      next()
+    }
+  })
+}
+
+router.get('/', verify, (req, res, next) => {
   return knex('favorites')
     .innerJoin('users', 'favorites.user_id', 'users.id')
     .innerJoin('trails', 'favorites.trail_id', 'trails.id')
@@ -14,7 +33,7 @@ router.get('/', (req, res, next) => {
     })
 })
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', verify, (req, res, next) => {
   return knex('favorites')
     .innerJoin('users', 'favorites.user_id', 'users.id')
     .innerJoin('trails', 'favorites.trail_id', 'trails.id')
@@ -27,7 +46,7 @@ router.get('/:id', (req, res, next) => {
     })
 })
 
-router.post('/', (req, res, next) => {
+router.post('/', verify, (req, res, next) => {
   return knex('favorites')
   .insert({
     trail_id: req.body.trailId,
@@ -42,7 +61,7 @@ router.post('/', (req, res, next) => {
   })
 })
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', verify, (req, res, next) => {
   return knex('favorites')
     .where('favorites.id', req.params.id)
     .del()
