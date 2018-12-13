@@ -13,8 +13,8 @@ exports.up = function(knex) {
     table.integer('length')
     table.integer('ascent')
     table.integer('descent')
-    table.integer('high_point')
-    table.integer('low_point')
+    table.integer('high')
+    table.integer('low')
     table.integer('longitude')
   })
 }
