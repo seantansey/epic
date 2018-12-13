@@ -11,8 +11,6 @@ router.get('/favorites',(req, res) => {
       res.status(200).send(result)
     })
 })
-
-router.get('/', ())
 // - Favorites
 //   - POST /api/favorites add a new favorite
 //   - GET /api/favorites Retrieve all favorites
