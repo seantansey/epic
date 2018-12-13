@@ -1,17 +1,17 @@
 # US Epics
-McKenzie River Trail
+~~McKenzie River Trail~~
 
-Johnson Pass Trail, AK
+~~Johnson Pass Trail, AK~~
 
-Lake Ouachita Vista Trail, AR
+~~Lake Ouachita Vista Trail, AR~~
 
-Ouachita National Recreation Trail, AR
+~~Ouachita National Recreation Trail, AR~~
 
-Syllamo, AR
+~~Syllamo, AR~~
 
-Upper Buffalo Headwaters, AR
+~~Upper Buffalo Headwaters, AR~~
 
-Womble Trail, AR
+~~Womble Trail, AR~~
 
 Black Canyon Trail, AZ
 
