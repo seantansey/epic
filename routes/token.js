@@ -26,6 +26,9 @@ router.post('/', (req, res, next) => {
     .then((user) => {
       bcrypt.compare(req.body.password, user.password, (err, result) => {
         if (result) {
+          delete user.password
+          delete user.created_at
+          delete user.updated_at
           const token = jwt.sign(JSON.stringify(user), key)
           res.cookie('token', token, { httpOnly: true })
           .send({

@@ -6,7 +6,7 @@ const knex = require('../knex')
 router.get('/', (req, res, next)=>{
   return knex('trails')
   .then((trail)=>{
-    res.send(trail[0])
+    res.send(trail)
   })
   .catch((err) => {
     next(err)
