@@ -1,27 +1,32 @@
-document.addEventListener('DOMContentLoaded', event => {
 
-  const createNewUser = (user) => {
-    return axios.post ('/users', user)
-    putOnPage(data)
+
+  // POST /api/signup Create a new user
+  const createNewUser = (newUser) => {
+    axios.post('/users', newUser)
+      .then(data => {
+        putOnPage(data.data)
+      })
   }
 
-  const putOnPage = (data) =>{
-    document.querySelector('body').innerText = data
-    //
-    // DELETE /api/logout logout user
-    // const deleteUser = (userId) => {
-    //   return axios.delete(`/users/${userId}`)
-    // }
 
-  })
+  // POST /api/login User login
+  const loginUser = (user) => {
+    axios.post('/token', user)
+      .then(data => {
+        putOnPage(data.data)
+      })
   }
 
-function getAllTrails () {
-  axios.get('/trails').then(data =>{
-    putOnPage(data.data)
-  })
-}
+  // GET /api/favorites Retrieve all favorites
+  const getFavoirtes = () => {
+    return axios.get('/favorites')
+      .then(data => {
+        putOnPage(data.data)
+      })
+  }
 
-function putOnPage (data) {
-  document.querySelector('body').innerText = JSON.stringify(data)
-}
+
+
+  function putOnPage(data) {
+    document.querySelector('body').innerText = JSON.stringify(data)
+  }
