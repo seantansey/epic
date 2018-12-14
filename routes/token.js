@@ -9,10 +9,9 @@ const key = process.env.JWT_KEY
 //get route, checks for cookie
 router.get('/', (req, res, next) => {
   jwt.verify(req.cookies.token, key, (err) => {
-    if(err) {
+    if (err) {
       res.send(false)
-    }
-    else {
+    } else {
       res.send(true)
     }
   })
@@ -26,17 +25,26 @@ router.post('/', (req, res, next) => {
     .then((user) => {
       bcrypt.compare(req.body.password, user.password, (err, result) => {
         if (result) {
+          // paul added this
           delete user.password
           delete user.created_at
           delete user.updated_at
           const token = jwt.sign(JSON.stringify(user), key)
-          res.cookie('token', token, { httpOnly: true })
-          .send({
-            id: user.id,
-            email: user.email
-          })
-        }
-        else {
+          res.cookie('token', token, {
+              httpOnly: true
+            })
+            // seans code:
+            // .send({
+            //   id: user.id,
+            //   email: user.email
+            // })
+            // for postman test
+            .send({
+              user: user,
+              id: user.id,
+              email: user.email
+            })
+        } else {
           next({
             status: 400,
             error: err,
@@ -55,7 +63,9 @@ router.post('/', (req, res, next) => {
 
 // delete cookie
 router.delete('/', (req, res, next) => {
-  res.cookie('token', '', { httpOnly: true }).send('logged out')
+  res.cookie('token', '', {
+    httpOnly: true
+  }).send('logged out')
 })
 
 module.exports = router

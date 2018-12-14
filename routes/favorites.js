@@ -1,6 +1,27 @@
+'use strict'
+
 var express = require('express')
+const jwt = require('jsonwebtoken')
 var router = express.Router()
 const knex = require('../knex')
+const key = process.env.JWT_KEY
+
+const verify = function(req, res, next) {
+  jwt.verify(req.cookies.token, key, (err, decoded) => {
+    if (err) {
+      next({
+        status: 401,
+        message: 'Unauthorized'
+      })
+    }
+    else {
+      req.userCredentials = decoded
+
+      // console.log(req.userCredentials);
+      next()
+    }
+  })
+}
 
 const verify = function(req, res, next) {
   jwt.verify(req.cookies.token, secretToken,
