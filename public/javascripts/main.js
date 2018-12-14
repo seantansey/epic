@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  getAllTrails()
+  
   createNewUser({
     email: "sara@gmail.com",
     password: "123"
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     password: "123"
   })
 
+  getFavoirtes()
 
 
 })

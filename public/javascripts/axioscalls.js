@@ -22,6 +22,7 @@
     return axios.get('/favorites')
       .then(data => {
         putOnPage(data.data)
+        console.log(datagit);
       })
   }
 
