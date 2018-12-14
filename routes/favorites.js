@@ -2,6 +2,23 @@ var express = require('express')
 var router = express.Router()
 const knex = require('../knex')
 
+const verify = function(req, res, next) {
+  jwt.verify(req.cookies.token, secretToken,
+    (err, decoded) => {
+      if (err) {
+        next({
+          status: 401,
+          error: err,
+          message: 'Unauthorized'
+        })
+      }
+      else {
+        req.userCredentials = decoded
+        next()
+      }
+    })
+}
+
 router.get('/', (req, res, next) => {
   return knex('favorites')
     .innerJoin('users', 'favorites.user_id', 'users.id')
