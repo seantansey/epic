@@ -19,7 +19,7 @@ const verify = function(req, res, next) {
     })
 }
 
-router.get('/', (req, res, next) => {
+router.get('/', verify, (req, res, next) => {
   return knex('favorites')
     .innerJoin('users', 'favorites.user_id', 'users.id')
     .innerJoin('trails', 'favorites.trail_id', 'trails.id')
@@ -31,7 +31,7 @@ router.get('/', (req, res, next) => {
     })
 })
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', verify, (req, res, next) => {
   return knex('favorites')
     .innerJoin('users', 'favorites.user_id', 'users.id')
     .innerJoin('trails', 'favorites.trail_id', 'trails.id')
@@ -44,7 +44,7 @@ router.get('/:id', (req, res, next) => {
     })
 })
 
-router.post('/', (req, res, next) => {
+router.post('/', verify, (req, res, next) => {
   return knex('favorites')
   .insert({
     trail_id: req.body.trailId,
@@ -59,7 +59,7 @@ router.post('/', (req, res, next) => {
   })
 })
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', verify, (req, res, next) => {
   return knex('favorites')
     .where('favorites.id', req.params.id)
     .del()
