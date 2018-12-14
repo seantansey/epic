@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   getAllTrails()
   getOneTrail(4)
 
@@ -12,7 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
     password: "123"
   })
 
-  getFavoirtes()
 
+  logoutUser({
+    email: "jamie@gmail.com",
+    password: "123"
+  })
+
+  getOneUser({
+    email: "kyle@gmail.com",
+    password: "123"
+  })
+
+  addFavorite({
+    trailId: 1,
+    userId: 1
+  })
+
+  getFavorites()
+
+  getAFavorite(4)
 
 })
