@@ -19,7 +19,8 @@
 function getAllTrails () {
   axios.get('/trails')
   .then(data => {
-    putOnPage(data.data)
+    console.log(data.data)
+    return data.data
   })
 }
 
@@ -58,10 +59,4 @@ function putOnPage (data) {
       .then(data => {
         putOnPage(data.data)
       })
-  }
-
-
-
-  function putOnPage(data) {
-    document.querySelector('body').innerText = JSON.stringify(data)
   }
