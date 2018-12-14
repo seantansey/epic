@@ -1,90 +1,91 @@
 # US Epics
+~~McKenzie River Trail~~
 
-Johnson Pass Trail, AK
+~~Johnson Pass Trail, AK~~
 
-Lake Ouachita Vista Trail, AR
+~~Lake Ouachita Vista Trail, AR~~
 
-Ouachita National Recreation Trail, AR
+~~Ouachita National Recreation Trail, AR~~
 
-Syllamo, AR
+~~Syllamo, AR~~
 
-Upper Buffalo Headwaters, AR
+~~Upper Buffalo Headwaters, AR~~
 
-Womble Trail, AR
+~~Womble Trail, AR~~
 
-Black Canyon Trail, AZ
+~~Black Canyon Trail, AZ~~
 
-Armstrong to Strawberry, CA
+~~Armstrong to Strawberry, CA~~
 
-Big Boulder, CA
+~~Big Boulder, CA~~
 
-Cannell Trail, CA
+~~Cannell Trail, CA~~
 
-South Yuba, CA
+~~South Yuba, CA~~
 
-Tahoe Rim, CA
+~~Tahoe Rim, CA~~
 
-Buffalo Creek, CA
+~~Buffalo Creek, CA~~
 
-Colorado Trail, southern segments, CO
+~~Colorado Trail, southern segments, CO~~
 
-Aspen Snowmass Mega Loop, CO
+~~Aspen Snowmass Mega Loop, CO~~
 
-Monarch Crest, CO
+~~Monarch Crest, CO~~
 
-Bull and Jake Mountain, GA
+~~Bull and Jake Mountain, GA~~
 
-Galena Grinder, ID
+~~Galena Grinder, ID~~
 
-High Country Pathway, MI
+~~High Country Pathway, MI~~
 
-Bangtail Divide, MT
+~~Bangtail Divide, MT~~
 
-Tsali Loops, NC
+~~Tsali Loops, NC~~
 
-Kerr Scott, NC
+~~Kerr Scott, NC~~
 
-Maah Daah Hey, ND
+~~Maah Daah Hey, ND~~
 
-South Boundary Trail, NM
+~~South Boundary Trail, NM~~
 
-Ellicottville Loop, NY
+~~Ellicottville Loop, NY~~
 
-Mohican State Park, OH
+~~Mohican State Park, OH~~
 
-North Umpqua, OR
+~~North Umpqua, OR~~
 
-Surveyor's Ridge, OR
+~~Surveyor's Ridge, OR~~
 
-Waldo Lake, OR
+~~Waldo Lake, OR~~
 
-Rattling Creek, PA
+~~Rattling Creek, PA~~
 
-Rothrock State Forest, PA
+~~Rothrock State Forest, PA~~
 
-Big South Fork, TN
+~~Big South Fork, TN~~
 
-Fresno-Sauceda Loop, TX
+~~Fresno-Sauceda Loop, TX~~
 
-Goodwater Loop, TX
+~~Goodwater Loop, TX~~
 
-Hurricane Cliffs Rim Loop, UT
+~~Hurricane Cliffs Rim Loop, UT~~
 
-Mid Mountain Loop, UT
+~~Mid Mountain Loop, UT~~
 
-Southern Traverse, VA
+~~Southern Traverse, VA~~
 
-Plains of Abraham, WA
+~~Plains of Abraham, WA~~
 
-Rock Lake, WI
+~~Rock Lake, WI~~
 
-Gauley Headwaters, WV
+~~Gauley Headwaters, WV~~
 
-Spruce Knob Seneca, WV
+~~Spruce Knob Seneca, WV~~
 
-Curt Gowdy State Park, WY
+~~Curt Gowdy State Park, WY~~
 
-Grand Targhee Loop, WY
+~~Grand Targhee Loop, WY~~
 
 # CA Epics
 
