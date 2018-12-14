@@ -1,27 +1,10 @@
 'use strict'
 
-var express = require('express')
+const express = require('express')
 const jwt = require('jsonwebtoken')
-var router = express.Router()
+const router = express.Router()
 const knex = require('../knex')
-const key = process.env.JWT_KEY
-
-const verify = function(req, res, next) {
-  jwt.verify(req.cookies.token, key, (err, decoded) => {
-    if (err) {
-      next({
-        status: 401,
-        message: 'Unauthorized'
-      })
-    }
-    else {
-      req.userCredentials = decoded
-
-      // console.log(req.userCredentials);
-      next()
-    }
-  })
-}
+const secretToken = process.env.JWT_KEY
 
 const verify = function(req, res, next) {
   jwt.verify(req.cookies.token, secretToken,
@@ -32,8 +15,7 @@ const verify = function(req, res, next) {
           error: err,
           message: 'Unauthorized'
         })
-      }
-      else {
+      } else {
         req.userCredentials = decoded
         next()
       }
@@ -41,11 +23,14 @@ const verify = function(req, res, next) {
 }
 
 router.get('/', verify, (req, res, next) => {
-  return knex('favorites')
+  knex('favorites')
     .innerJoin('users', 'favorites.user_id', 'users.id')
     .innerJoin('trails', 'favorites.trail_id', 'trails.id')
+    .where({
+      'users.email': req.userCredentials.email
+    })
     .then((favorite) => {
-      res.status(200).send(favorite[0])
+      res.status(200).send(favorite)
     })
     .catch((err) => {
       next(err)
@@ -53,45 +38,50 @@ router.get('/', verify, (req, res, next) => {
 })
 
 router.get('/:id', verify, (req, res, next) => {
-  return knex('favorites')
-    .innerJoin('users', 'favorites.user_id', 'users.id')
-    .innerJoin('trails', 'favorites.trail_id', 'trails.id')
-    .where('favorites.id', req.params.id)
-    .then((result) => {
-      res.status(200).send(result[0])
+  knex('users')
+  .where({ email: req.userCredentials.email})
+  .first()
+  .then( user => {
+    knex('favorites')
+    .where({ 'user_id': user.id, 'trail_id': req.params.id  })
+    .then(favorite =>{
+      res.send(favorite)
     })
-    .catch((err) => {
-      next(err)
-    })
+
+  })
 })
 
 router.post('/', verify, (req, res, next) => {
-  return knex('favorites')
-  .insert({
-    trail_id: req.body.trailId,
-    user_id: 1
+knex('users')
+  .where({
+    email: req.userCredentials.email
   })
-  .returning(['id','trail_id','user_id'])
-  .then((result) => {
-    res.status(200).send(result[0])
-  })
-  .catch((err) => {
-    next(err)
+  .first()
+  .then(user => {
+    knex('favorites')
+      .insert({
+        trail_id: req.body.trailId,
+        user_id: user.id
+      }, ['trail_id','user_id'])
+      .then(favorite => {
+        res.send(favorite)
+      })
   })
 })
 
-router.delete('/:id', verify, (req, res, next) => {
-  return knex('favorites')
-    .where('favorites.id', req.params.id)
-    .del()
-    .returning('*')
-    .then((result) => {
-      res.status(200).send(result[0])
-    })
-    .catch((err) => {
-      next(err)
-    })
+router.delete('/', verify, (req, res, next) => {
+  knex('users')
+  .where({ email: req.userCredentials.email })
+  .first()
+  .then(user => {
+      knex('favorites')
+      .where({ 'user_id': user.id, 'trail_id':req.body.trailId  })
+      .del()
+      .returning('*')
+      .then(trail => {
+        res.send(trail)
+      })
+  })
 })
-
 
 module.exports = router
