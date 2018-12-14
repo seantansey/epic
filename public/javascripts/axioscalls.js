@@ -1,4 +1,20 @@
+document.addEventListener('DOMContentLoaded', event => {
 
+  const createNewUser = (user) => {
+    return axios.post ('/users', user)
+    putOnPage(data)
+  }
+
+  const putOnPage = (data) =>{
+    document.querySelector('body').innerText = data
+    //
+    // DELETE /api/logout logout user
+    // const deleteUser = (userId) => {
+    //   return axios.delete(`/users/${userId}`)
+    // }
+
+  })
+  }
 
 // Users
 //
