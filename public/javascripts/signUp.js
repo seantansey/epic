@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     user.password = loginForm.inputPassword.value
     createNewUser(user).then(data => {
       console.log(data)
+    window.location.href = 'HomePage.html'
     })
   })
 
