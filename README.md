@@ -6,6 +6,8 @@ An EPIC is a special designation for a true backcountry riding experience that m
 
 EPIC ride finder gives you the beta you need to realize your mountain biking bucket, helping you to make these special and adventurous rides a reality. 
 
+EPIC ride finder © Hand crafted in Boulder, Colorado
+
 [Deployed link](http://google.com/)
 
 ### Wireframes
