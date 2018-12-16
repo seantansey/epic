@@ -29,6 +29,7 @@ router.get('/', verify, (req, res, next) => {
     .where({
       'users.email': req.userCredentials.email
     })
+    .select('user.id', 'trails.id)
     .then((favorite) => {
       res.status(200).send(favorite)
     })
