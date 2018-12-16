@@ -14,6 +14,13 @@ exports.seed = function(knex) {
           user_id: 1,
           created_at: new Date('2016-06-29 14:26:16 UTC'),
           updated_at: new Date('2016-06-29 14:26:16 UTC')
+        },
+        {
+          id: 2,
+          trail_id: 2,
+          user_id: 2,
+          created_at: new Date('2016-06-29 14:26:16 UTC'),
+          updated_at: new Date('2016-06-29 14:26:16 UTC')
         }]
       )
     })
