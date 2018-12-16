@@ -47,7 +47,7 @@ const getOneTrail = id => {
 // password:
 // }
 const createNewUser = newUser => {
-  axios.post('/users', newUser)
+  return axios.post('/users', newUser)
     .then(data => {
       return data.data
     })
