@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     user.email = loginForm.inputEmail.value
     user.password = loginForm.inputPassword.value
     loginUser(user).then(data => {
-      console.log(data)
-    window.location.href='trails.html'
+      window.location.href = 'trails.html'
     })
   })
 

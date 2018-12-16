@@ -8,14 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     user.password = loginForm.inputPassword.value
     createNewUser(user).then(data => {
       console.log(data)
-    window.location.href = 'HomePage.html'
+      window.location.href = 'HomePage.html'
     })
   })
 
   const goToLoginBtn = document.getElementById('login-page-btn')
 
   goToLoginBtn.addEventListener('click', () => {
-    console.log('hello')
     window.location.href='HomePage.html'
   })
 })
