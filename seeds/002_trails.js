@@ -19,7 +19,7 @@ exports.seed = function(knex) {
           high: 3147,
           low: 1430,
           longitude: 122.0015,
-          longitude: 44.3936,
+          latitude: 44.3936,
         }, {
           id: 2,
           mtbproject_id: 7015406,
