@@ -89,23 +89,6 @@ exports.seed = function(knex) {
           latitude: 35.8573,
           id: 5,
         }, {
-          mtbproject_id: 7002912,
-          name: "Upper Buffalo Headwaters",
-          summary: "Remote backcountry singletrack in the heart of the Ozarks.",
-          difficulty: "blueBlack",
-          stars: 4.2,
-          location: "Jasper, Arkansas",
-          url: "https:\/\/www.mtbproject.com\/trail\/7002912\/upper-buffalo-headwaters-imba-epic",
-          img_medium: "https:\/\/cdn-files.apstatic.com\/mtb\/7002516_medium_1431785583.jpg",
-          length: 20.2,
-          ascent: 2194,
-          descent: -2202,
-          high: 2512,
-          low: 1769,
-          longitude: -93.4949,
-          latitude: 35.8573,
-          id: 6,
-        }, {
           mtbproject_id: 7000113,
           name: "Black Canyon Trail (BCT)",
           summary: "An exciting, long-distance singletrack experience through the foothills of the Bradshaw Mountains.",
@@ -121,7 +104,7 @@ exports.seed = function(knex) {
           low: 1604,
           longitude: -112.1439,
           latitude: 34.4587,
-          id: 7,
+          id: 6,
         }, {
           mtbproject_id: 7005660,
           name: "Armstrong to Strawberry",
@@ -138,7 +121,7 @@ exports.seed = function(knex) {
           low: 5711,
           longitude: -119.9405,
           latitude: 38.8564,
-          id: 8,
+          id: 7,
         }, {
           mtbproject_id: 7008693,
           name: "Big Boulder from Packer Saddle",
@@ -155,7 +138,7 @@ exports.seed = function(knex) {
           low: 2896,
           longitude: -120.6666,
           latitude: 39.6145,
-          id: 9,
+          id: 8,
         }, {
           mtbproject_id: 76708,
           name: "Big South Fork",
@@ -172,10 +155,10 @@ exports.seed = function(knex) {
           low: 1275,
           longitude: -84.6984,
           latitude: 36.4879,
-          id: 10,
+          id: 9,
         },
         {
-          id: 11,
+          id: 10,
           mtbproject_id: 86977,
           name: "Rattling Creek",
           summary: "Flowy trails punctuated with rock gardens create classic East Coast riding.",
@@ -193,7 +176,7 @@ exports.seed = function(knex) {
           latitude: 40.5446,
         },
         {
-          id: 12,
+          id: 11,
           mtbproject_id: 87559,
           name: "North Umpqua",
           summary: "Endless singletrack through old growth forests in the Pacific Northwest",
@@ -211,7 +194,7 @@ exports.seed = function(knex) {
           latitude: 43.2991,
         },
         {
-          id: 13,
+          id: 12,
           mtbproject_id: 91627,
           name: "Maah Daah Hey",
           summary: "93 miles of North Dakota singletrack through painted buttes and tall grass prairies",
@@ -229,7 +212,7 @@ exports.seed = function(knex) {
           latitude: 46.9549,
         },
         {
-          id: 14,
+          id: 13,
           mtbproject_id: 134766,
           name: "Rock Lake",
           summary: "A linkup of deep woods singletrack - one of the longest skinny-trail routes in the Upper Midwest.",
@@ -247,7 +230,7 @@ exports.seed = function(knex) {
           latitude: 46.1976,
         },
         {
-          id: 15,
+          id: 14,
           mtbproject_id: 169815,
           name: "Southern Traverse",
           summary: "Big mountain singletrack on the east coast - 3,000 feet of climbing for courage and endurance.",
@@ -265,7 +248,7 @@ exports.seed = function(knex) {
           latitude: 38.2218,
         },
         {
-          id: 16,
+          id: 15,
           mtbproject_id: 479729,
           name: "Colorado Trail: The Entire MTB Route",
           summary: "A life-changing ride on the Colorado Trail from Denver to Durango.",
@@ -283,7 +266,7 @@ exports.seed = function(knex) {
           latitude: 39.4898,
         },
         {
-          id: 17,
+          id: 16,
           mtbproject_id: 513404,
           name: "Fresno-Sauceda Loop",
           summary: "A huge ride with plenty of challenges.  Great opportunity to make it into a multi-day ride.",
@@ -301,7 +284,7 @@ exports.seed = function(knex) {
           latitude: 29.273,
         },
         {
-          id: 18,
+          id: 17,
           mtbproject_id: 523830,
           name: "Bull and Jake Mountain",
           summary: "Get ready for some red clay singletrack in the North Georgia Mountains.",
@@ -319,7 +302,7 @@ exports.seed = function(knex) {
           latitude: 34.5828,
         },
         {
-          id: 19,
+          id: 18,
           mtbproject_id: 565265,
           name: "Ellicottville Loop",
           summary: "An updated version of the 2002 IMBA Ellicottville Epic ride.",
@@ -337,7 +320,7 @@ exports.seed = function(knex) {
           latitude: 42.2502,
         },
         {
-          id: 20,
+          id: 19,
           mtbproject_id: 770094,
           name: "Kerr Scott",
           summary: "Bring on the Berms! This Epic ride incorporates all of the Kerr Scott trail systems.",
@@ -355,7 +338,7 @@ exports.seed = function(knex) {
           latitude: 36.1352,
         },
         {
-          id: 21,
+          id: 20,
           mtbproject_id: 845269,
           name: "Buffalo Creek Big Loop",
           summary: "A nice tour of some of the best of Buffalo Creek - mostly smooth singletrack with some climbing.",
@@ -373,7 +356,7 @@ exports.seed = function(knex) {
           latitude: 39.3866,
         },
         {
-          id: 22,
+          id: 21,
           mtbproject_id: 846258,
           name: "Bangtail Divide",
           summary: "Close-to-town access to an intermediate but lengthy ride featuring views of multiple mountain ranges",
@@ -391,7 +374,7 @@ exports.seed = function(knex) {
           latitude: 45.761,
         },
         {
-          id: 23,
+          id: 22,
           mtbproject_id: 960984,
           name: "Mohican Mountain Bike Trail",
           summary: "One of Ohio's epic rides!",
@@ -409,7 +392,7 @@ exports.seed = function(knex) {
           latitude: 40.6068,
         },
         {
-          id: 24,
+          id: 23,
           mtbproject_id: 1221910,
           name: "Tahoe Rim & Flume Trail via Tahoe Meadows",
           summary: "An awesome high altitude ride through towering pines with majestic views of the Tahoe area.",
@@ -427,7 +410,7 @@ exports.seed = function(knex) {
           latitude: 39.3078,
         },
         {
-          id: 25,
+          id: 24,
           mtbproject_id: 3579474,
           name: "Mid Mountain Loop",
           summary: "A challenging tour of classic Wasatch singletrack.",
@@ -445,7 +428,7 @@ exports.seed = function(knex) {
           latitude: 40.6569,
         },
         {
-          id: 26,
+          id: 25,
           mtbproject_id: 3607752,
           name: "Tsali Left and Right Loops",
           summary: "Classic NC singletrack.",
@@ -463,7 +446,7 @@ exports.seed = function(knex) {
           latitude: 35.4065,
         },
         {
-          id: 27,
+          id: 26,
           mtbproject_id: 3671983,
           name: "Monarch Crest",
           summary: "One of Colorado's top 5 epic rides - classic high-altitude riding in the Rockies!",
@@ -481,7 +464,7 @@ exports.seed = function(knex) {
           latitude: 38.4965,
         },
         {
-          id: 28,
+          id: 27,
           mtbproject_id: 3682158,
           name: "Surveyor's Ridge",
           summary: "Iconic PNW riding; tough and rugged Surveyor's Ridge Trail  with scenic postcard views of Mt. Hood.",
@@ -499,7 +482,7 @@ exports.seed = function(knex) {
           latitude: 45.4657,
         },
         {
-          id: 29,
+          id: 28,
           mtbproject_id: 3684835,
           name: "Rothrock TrailMix",
           summary: "An awesome expedition of the best tech and flow that Rothrock trails have to offer.",
@@ -517,7 +500,7 @@ exports.seed = function(knex) {
           latitude: 40.7651,
         },
         {
-          id: 30,
+          id: 29,
           mtbproject_id: 3734125,
           name: "Waldo Lake Loop",
           summary: "A tough, but scenic all-singletrack loop around the tranquil and pristine Waldo Lake.",
@@ -535,7 +518,7 @@ exports.seed = function(knex) {
           latitude: 43.761,
         },
         {
-          id: 31,
+          id: 30,
           mtbproject_id: 3801032,
           name: "Curt Gowdy State Park",
           summary: "A big loop that hits the highlights of both the mountain and reservoir trails.",
@@ -553,7 +536,7 @@ exports.seed = function(knex) {
           latitude: 41.1605,
         },
         {
-          id: 32,
+          id: 31,
           mtbproject_id: 4073073,
           name: "South Boundary Trail #164",
           summary: "This classic little-bit-of-everything sub-alpine forest ridge ride is consistently ranked among the best in New Mexico.",
@@ -571,7 +554,7 @@ exports.seed = function(knex) {
           latitude: 36.306,
         },
         {
-          id: 33,
+          id: 32,
           mtbproject_id: 4091943,
           name: "Hurricane Rim Loop",
           summary: "A popular loop that combines three fun trails with easy climbs, fast descending, and great vistas.",
@@ -589,7 +572,7 @@ exports.seed = function(knex) {
           latitude: 37.2003,
         },
         {
-          id: 34,
+          id: 33,
           mtbproject_id: 4550979,
           name: "Ape Canyon to Plains of Abraham",
           summary: "An amazing journey back in time to the scene of the Mt. St. Helens eruption.",
@@ -607,7 +590,7 @@ exports.seed = function(knex) {
           latitude: 46.1655,
         },
         {
-          id: 35,
+          id: 34,
           mtbproject_id: 6045531,
           name: "Goodwater Loop of Lake Georgetown",
           summary: "An excellent skills building trail with many scenic views.",
@@ -625,7 +608,7 @@ exports.seed = function(knex) {
           latitude: 30.67,
         },
         {
-          id: 36,
+          id: 35,
           mtbproject_id: 7002026,
           name: "South Yuba Trail: Missouri Bar to South Yuba Camp",
           summary: "A scenic technical ride along the South Yuba river",
@@ -643,7 +626,7 @@ exports.seed = function(knex) {
           latitude: 39.346,
         },
         {
-          id: 37,
+          id: 36,
           mtbproject_id: 7005013,
           name: "High Country Pathway",
           summary: "Michigan's longest loop trail crossing through three counties and covering varied terrain.",
@@ -661,7 +644,7 @@ exports.seed = function(knex) {
           latitude: 45.1154,
         },
         {
-          id: 38,
+          id: 37,
           mtbproject_id: 7015267,
           name: "Spruce Knob to Seneca Creek",
           summary: "From the highest point in WV to the water falls of Seneca Creek, this ride has it all.",
@@ -679,7 +662,7 @@ exports.seed = function(knex) {
           latitude: 38.7119,
         },
         {
-          id: 39,
+          id: 38,
           mtbproject_id: 7028664,
           name: "Galena Grinder 2017 Full Course",
           summary: "Our 2017 edition of The Galena Grinder, one of the longest running MTB races in Idaho.",
@@ -697,7 +680,7 @@ exports.seed = function(knex) {
           latitude: 43.873,
         },
         {
-          id: 40,
+          id: 39,
           mtbproject_id: 7030503,
           name: "Aspen Snowmass Mega Loop",
           summary: "Singletrack overload, technical classics, modern flow, never-ending views. A worthy and rewarding ride to remember!",
