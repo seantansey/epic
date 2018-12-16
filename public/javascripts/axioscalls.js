@@ -16,46 +16,49 @@
 //GET /api/trails get all trails
 
 
-function getAllTrails () {
-  axios.get('/trails')
-  .then(data => {
-    putOnPage(data.data)
-  })
+const getAllTrails = () => {
+  return axios.get('/trails')
+    .then(data => {
+      return data.data
+    })
 }
 
-function getOneTrail (id) {
-  axios.get(`/trails/${id}`).then(data => {
-    putOnPage(data.data)
-  })
+const getOneTrail = id => {
+  return axios.get(`/trails/${id}`)
+    .then(data => {
+      return data.data
+    })
 }
 
-function putOnPage (data) {
+const createNewUser = newUser => {
+  axios.post('/users', newUser)
+    .then(data => {
+      return data.data
+    })
+}
+
+// POST /api/signup Create a new user
+
+
+// POST /api/login User login
+const loginUser = user => {
+  return axios.post('/token', user)
+    .then(data => {
+      return data.data
+    })
+}
+
+// GET /api/favorites Retrieve all favorites
+const getFavorites = () => {
+  return axios.get('/favorites')
+    .then(data => {
+      return data.data
+    })
+}
+
+const putOnPage = data => {
   console.log('hi');
   let p = document.createElement('p')
   p.innerText = JSON.stringify(data)
   document.querySelector('body').appendChild(p)
 }
-  // POST /api/signup Create a new user
-  const createNewUser = (newUser) => {
-    axios.post('/users', newUser)
-      .then(data => {
-        putOnPage(data.data)
-      })
-  }
-
-
-  // POST /api/login User login
-  const loginUser = (user) => {
-    axios.post('/token', user)
-      .then(data => {
-        putOnPage(data.data)
-      })
-  }
-
-  // GET /api/favorites Retrieve all favorites
-  const getFavoirtes = () => {
-    return axios.get('/favorites')
-      .then(data => {
-        putOnPage(data.data)
-      })
-  }
