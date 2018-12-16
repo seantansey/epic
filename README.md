@@ -1,5 +1,7 @@
 # EPIC
 
+(https://github.com/stansey92/epic/blob/master/epic_logo.png)
+
 [Deployed link](http://google.com/)
 
 ### Wireframes
