@@ -20,6 +20,16 @@
 
   <!--Adding bootstrap code for Login Form to head above  -->
 
+  <!--Connecting pages with Javascript below -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" charset="utf-8"></script>
+  <script src="./javascripts/axioscalls.js" charset="utf-8"></script>
+  <script src="./javascripts/signUp.js" charset="utf-8"></script>
+
+
+  <!--Connecting pages with Javascript above -->
+
+
+
   <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 
 
@@ -50,9 +60,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Trails</a>
+            <a class="nav-item nav-link" href="HomePage.html">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="trails.html">Trails</a>
             <a class="nav-item nav-link" href="#">Favorites</a>
+            <a class="nav-item nav-link active" href="Signup_Signin.html">Sign Up</a>
           </div>
         </div>
       </div>
@@ -99,7 +110,7 @@
 
           </div>
 
-          <button type="submit" class="btn btn-primary">Register</button>
+          <button type="submit" class="btn btn-primary" id="registerButton">Register</button>
 
 
           <p></p>
