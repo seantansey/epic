@@ -16,7 +16,7 @@ exports.up = function(knex) {
     table.integer('high_point')
     table.integer('low_point')
     table.integer('longitude')
-    table.
+    table.integer('latitude')
   })
 }
 
