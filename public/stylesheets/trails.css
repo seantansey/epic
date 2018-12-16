@@ -1,0 +1,59 @@
+.card {
+  float: left;
+  margin: 2%;
+  width: 230px;
+  height: 360px;
+  border-color: #6a7172;
+  margin-bottom: 4%;
+
+}
+
+img {
+  height: 200px;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+}
+
+footer {
+  color: white;
+}
+
+
+
+#banner {
+  background-color: #dd745f;
+  text-align: center;
+  font-weight: bolder;
+
+}
+
+#banner2 {
+  background-color: #7eb0e3;
+  margin-top: -10px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#banner3 {
+  background-color: #eae1c0;
+  margin-top: -10px;
+  height: 18px;
+}
+
+#exampleModalLabel {
+  background-color: #dd745f;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+
+.favorite {
+  background-color: #dd745f;
+}
+
+.cardBody {
+  margin-bottom: 50px;
+}
