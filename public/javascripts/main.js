@@ -17,7 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
   //  email: "jamie@gmail.com",
   //  password: "123"
   //})
-
-
-
 })

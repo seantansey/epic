@@ -1,19 +1,4 @@
-//Users
-//
-//POST /api/signup Create a new user
-//POST /api/login User login
-//POST /api/logout logout user
-//GET /api/users/:id Retrieve user information
-//Favorites
-//
-//POST /api/favorites add a new favorite
-//GET /api/favorites Retrieve all favorites
-//GET /api/favorites/:id Retrieve a single favorite
-//DELETE /api/favorites/:id Delete an favorite
-//Trails
-//
-//GET /api/trails/:id get a single trail
-//GET /api/trails get all trails
+// Trails
 
 
 const getAllTrails = () => {
@@ -56,8 +41,26 @@ const getFavorites = () => {
     })
 }
 
-const putOnPage = data => {
-  console.log('hi');
+//POST /api/favorites add a new favorite
+const addFavorite = (favorite) => {
+  return axios.post('/favorites',favorite)
+    .then(data => {
+      putOnPage(data.data)
+    })
+}
+
+//GET /api/favorites/:id Retrieve a single favorite
+const getAFavorite = (id) => {
+  axios.get(`/favorites/${id}`)
+    .then(data => {
+      putOnPage(data.data)
+    })
+}
+
+//DELETE /api/favorites/:id Delete an favorite
+
+
+const putOnPage = (data) => {
   let p = document.createElement('p')
   p.innerText = JSON.stringify(data)
   document.querySelector('body').appendChild(p)
