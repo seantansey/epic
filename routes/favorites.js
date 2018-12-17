@@ -23,29 +23,24 @@ const verify = function(req, res, next) {
 }
 
 router.get('/', verify, (req, res, next) => {
-  knex('users')
+  knex('favorites')
+    .innerJoin('users', 'favorites.user_id', 'users.id')
+    .innerJoin('trails', 'favorites.trail_id', 'trails.id')
     .where({
       'users.email': req.userCredentials.email
     })
-    .first()
-    .then(user => {
-      console.log(user);
-      knex('favorites')
-      .where({'favorites.user_id': user.id})
-      .select('favorites.trail_id')
-      .then(favorites => {
-        console.log(favorites)
-        knex('trails')
-        .then((favoriteTrails) => {
-          res.status(200).send(favoriteTrails)
-        })
+    .then((favorites) => {
+      favorites.forEach(favorite => {
+        delete favorite.password
+        delete favorite.email
+        delete favorite.user_id
       })
-      .catch((err) => {
-        next(err)
-      })
+      res.status(200).send(favorites)
+    })
+    .catch((err) => {
+      next(err)
     })
 })
-
 router.get('/:id', verify, (req, res, next) => {
   knex('users')
   .where({ email: req.userCredentials.email})
@@ -58,7 +53,6 @@ router.get('/:id', verify, (req, res, next) => {
     })
   })
 })
-
 router.post('/', verify, (req, res, next) => {
 knex('users')
   .where({
