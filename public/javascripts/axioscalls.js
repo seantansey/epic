@@ -73,7 +73,7 @@ const getAFavorite = (id) => {
 // id is favorites.id pkey
 // will fail if user does not have proper auth to delete
 const deleteFavorite = id => {
-  axios.delete(`/favorites/${id}`)
+  return axios.delete(`/favorites/${id}`)
   .then(data => {
     return data.data
   })
