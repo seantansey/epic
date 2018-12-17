@@ -10,7 +10,7 @@
 
   <!--Adding second stylesheet link below for home page.css-->
 
-  <link rel="stylesheet" href="Home Page.css">
+
 
   <!--Adding bootstrap code for Login Form to head below  -->
 
@@ -38,6 +38,7 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="signupandlogin.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <!-- Google fonts code link added Below-->
 
@@ -50,7 +51,7 @@
 </head>
 
 
-<body id="LoginForm">
+<body id="signup">
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -60,10 +61,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="HomePage.html">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="trails.html">Trails</a>
-            <a class="nav-item nav-link" href="#">Favorites</a>
-            <a class="nav-item nav-link active" href="Signup_Signin.html">Sign Up</a>
+            <a class="nav-item nav-link" href="favorites.html">Favorites</a>
+            <a class="nav-item nav-link active" href="#">Sign Up</a>
+            <a class="nav-item nav-link" href="login.html">Log In</a>
           </div>
         </div>
       </div>
@@ -79,7 +81,7 @@
       <div class="main-div">
         <div class="panel">
           <h2>EPIC Sign-Up</h2>
-          <p>Please enter your name, email and password</p>
+          <p>Please enter your email and password</p>
         </div>
         <form id="Login">
 
@@ -110,7 +112,7 @@
 
           </div>
 
-          <button type="submit" class="btn btn-primary" id="registerButton">Register</button>
+          <button type="submit" class="btn btn-primary" id="registerButton">Submit Registration</button>
 
 
           <p></p>
