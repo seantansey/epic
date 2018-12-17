@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     user.email = loginForm.inputEmail.value
     user.password = loginForm.inputPassword.value
     createNewUser(user).then(data => {
-      window.location.href = 'HomePage.html'
+      window.location.href = 'login.html'
     })
   })
 
   const goToLoginBtn = document.getElementById('login-page-btn')
 
   goToLoginBtn.addEventListener('click', () => {
-    window.location.href='HomePage.html'
+    window.location.href='login.html'
   })
 })
