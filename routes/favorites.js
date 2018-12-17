@@ -32,9 +32,10 @@ router.get('/', verify, (req, res, next) => {
       console.log(user);
       knex('favorites')
       .where({'favorites.user_id': user.id})
+      .select('favorites.trail_id')
       .then(favorites => {
+        console.log(favorites)
         knex('trails')
-        .when('')
         .then((favoriteTrails) => {
           res.status(200).send(favoriteTrails)
         })
