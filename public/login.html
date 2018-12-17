@@ -10,7 +10,7 @@
 
   <!--Adding second stylesheet link below for home page.css-->
 
-  <link rel="stylesheet" href="Home Page.css">
+  <link rel="stylesheet" href="signupandlogin.css">
 
   <!--Adding bootstrap code for Login Form to head below  -->
 
@@ -30,7 +30,7 @@
 
   <!--Adding bootstrap code for Login Form to head above  -->
 
-  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
 
 
   <!--Adding 2nd bootstrap code for Login Form to head below  -->
@@ -39,6 +39,8 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<link rel="stylesheet" href="signupandlogin.css">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
   <!-- Google fonts code link added Below-->
 
   <!-- <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">  -->
@@ -54,17 +56,17 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-
-        <a class="navbar-brand"><img src="./images/epic_logo.png" height=50px ></a>
+        <a class="navbar-brand"><img src="images/epicnavbar.png" height=40px ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="trails.html">Trails</a>
-            <a class="nav-item nav-link" href="#">Favorites</a>
-            <a class="nav-item nav-link" href="Signup_Signin.html">Sign Up</a>
+            <a class="nav-item nav-link" href="favorites.html">Favorites</a>
+            <a class="nav-item nav-link" href="signup.html">Sign Up</a>
+            <a class="nav-item nav-link active" href="#">Log In</a>
           </div>
         </div>
       </div>
@@ -78,7 +80,7 @@
     <h1 class="form-heading"></h1>
     <div class="login-form">
       <div class="main-div">
-        <div class="panel">
+        <div class="panel-log">
           <h2>EPIC Login</h2>
           <p>Please enter your email and password</p>
         </div>
@@ -96,9 +98,7 @@
             <input type="password" class="form-control" id="inputPassword" placeholder="Password">
 
           </div>
-          <div class="forgot">
-            <a href="reset.html">Forgot password?</a>
-          </div>
+          
           <button type="submit" class="btn btn-primary">Login</button>
 
   <!-- Adding second set of buttons below for sign/up and sign/in -->

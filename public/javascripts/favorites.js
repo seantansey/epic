@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  axios.get('/trails')
+  axios.get('/favorites')
   .then(data => {
+    console.log(data)
     for (let x = 0; x < data.data.length; x++) {
+      console.log(data.data[x])
       $('#carddiv').append(
         `<div class="card">
           <img class="card-img-top" src="${data.data[x].img_medium}">
@@ -11,9 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-${x}">
               More Info
-            </button>
-            <button type="button" id="fav${data.data[x].id}"class="btn btn-primary favorite"  data-target="#modal-${x}">
-              Favorite
             </button>
             <!-- Modal -->
             <div class="modal fade" id="modal-${x}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -48,11 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>`
       )
-      let fav = document.getElementById(`fav${data.data[x].id}`)
-
-      fav.addEventListener('click', ()=> {
-        addFavorite({ trailId: data.data[x].id})
-      })
     }
   })
 })
