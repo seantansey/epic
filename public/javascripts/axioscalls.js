@@ -25,7 +25,7 @@ const getOneTrail = id => {
 const createNewUser = newUser => {
   return axios.post('/users', newUser)
     .then(data => {
-      return data.data
+      return data
     })
 }
 
@@ -37,7 +37,7 @@ const createNewUser = newUser => {
 const loginUser = user => {
   return axios.post('/token', user)
     .then(data => {
-      return data.data
+      return data
     })
 }
 
@@ -59,7 +59,7 @@ const addFavorite = (favorite) => {
     })
 }
 
-//GET /api/favorites/:id Retrieve a single favorit
+//GET /api/favorites/:id Retrieve a single favorite
 // id is pkey id in favorites table. will fail if favorite with
 // id is not assigned to current user
 const getAFavorite = (id) => {
