@@ -1,4 +1,4 @@
-use strict'
+'use strict'
 
 const express = require('express')
 const jwt = require('jsonwebtoken')
@@ -23,20 +23,28 @@ const verify = function(req, res, next) {
 }
 
 router.get('/', verify, (req, res, next) => {
-  knex('favorites')
-    .innerJoin('users', 'favorites.user_id', 'users.id')
-    .innerJoin('trails', 'favorites.trail_id', 'trails.id')
+  knex('users')
     .where({
       'users.email': req.userCredentials.email
     })
-    .select('user.id', 'trails.id)
-    .then((favorite) => {
-      res.status(200).send(favorite)
-    })
-    .catch((err) => {
-      next(err)
+    .first()
+    .then(user => {
+      console.log(user);
+      knex('favorites')
+      .where({'favorites.user_id': user.id})
+      .then(favorites => {
+        knex('trails')
+        .when('')
+        .then((favoriteTrails) => {
+          res.status(200).send(favoriteTrails)
+        })
+      })
+      .catch((err) => {
+        next(err)
+      })
     })
 })
+
 router.get('/:id', verify, (req, res, next) => {
   knex('users')
   .where({ email: req.userCredentials.email})
@@ -49,6 +57,7 @@ router.get('/:id', verify, (req, res, next) => {
     })
   })
 })
+
 router.post('/', verify, (req, res, next) => {
 knex('users')
   .where({
