@@ -53,6 +53,9 @@ router.get('/:id', verify, (req, res, next) => {
     })
   })
 })
+
+// working here
+
 router.post('/', verify, (req, res, next) => {
 knex('users')
   .where({
@@ -60,16 +63,32 @@ knex('users')
   })
   .first()
   .then(user => {
+
     knex('favorites')
-      .insert({
-        trail_id: req.body.trailId,
-        user_id: user.id
-      }, ['trail_id','user_id'])
-      .then(favorite => {
-        res.send(favorite)
+      .where({
+        'favorites.user_id': user.id
+      })
+      .then(favorites =>{
+        let favoriteArr = favorites.filter(elem=>{
+          return elem.trail_id === req.body.trailId
+        })
+        if (favoriteArr.length === 0){
+          knex('favorites')
+          .insert({
+            trail_id: req.body.trailId,
+            user_id: user.id
+          }, ['trail_id','user_id'])
+          .then(favorite => {
+            res.send(favorite)
+          })
+        } else {
+          res.send("favorite already exist")
+        }
       })
   })
 })
+
+
 router.delete('/', verify, (req, res, next) => {
   knex('users')
   .where({ email: req.userCredentials.email })
