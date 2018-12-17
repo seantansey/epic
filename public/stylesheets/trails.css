@@ -14,6 +14,7 @@
 
 body {
   font-family: 'Abel', sans-serif;
+  background-color: #1f1f1e; 
 }
 
 footer {
@@ -26,7 +27,6 @@ footer {
   background-color: #dd745f;
   text-align: center;
   font-weight: bolder;
-
 }
 
 #banner2 {
