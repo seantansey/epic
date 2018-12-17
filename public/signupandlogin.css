@@ -1,7 +1,12 @@
 
 /* LoginForm CSS Content below */
 
-#LoginForm{ background-image:url("images/mountains.gif"); background-repeat:repeat; background-size:cover; padding:20px;}
+#LoginForm{
+  background-image:url("images/mountains.gif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+ }
 
 #signup {
   background-image: url('images/mtb.gif');
