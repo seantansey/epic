@@ -1,5 +1,13 @@
 # EPIC
 
+![logo](https://github.com/stansey92/epic/blob/master/epic_logo.png)
+
+An EPIC is a special designation for a true backcountry riding experience that many mountain bikers live for, and make travel plans around. An epic is an immersive ride that is technical, physically challenging, beautiful and worthy of celebration. 
+
+EPIC ride finder gives you the beta you need to realize your mountain biking bucket list, helping you to make these special and adventurous rides a reality. 
+
+EPIC Ride Finder © Hand Crafted in Boulder, Colorado. 2018 all rights reserved. 
+
 [Deployed link](http://google.com/)
 
 ### Wireframes
