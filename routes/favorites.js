@@ -1,4 +1,4 @@
-use strict'
+'use strict'
 
 const express = require('express')
 const jwt = require('jsonwebtoken')
@@ -29,9 +29,13 @@ router.get('/', verify, (req, res, next) => {
     .where({
       'users.email': req.userCredentials.email
     })
-    .select('user.id', 'trails.id)
-    .then((favorite) => {
-      res.status(200).send(favorite)
+    .then((favorites) => {
+      favorites.forEach(favorite => {
+        delete favorite.password
+        delete favorite.email
+        delete favorite.user_id
+      })
+      res.status(200).send(favorites)
     })
     .catch((err) => {
       next(err)
