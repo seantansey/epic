@@ -50,7 +50,7 @@ font-family: font-family: 'Abel', sans-serif;
 - Users
   - POST /users Create a new user
   - POST /token User login
-  - DELTE /token logout user
+  - DELETE /token logout user
   - GET /users/:id Retrieve user information
 
 - Favorites
