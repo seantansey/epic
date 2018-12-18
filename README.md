@@ -56,7 +56,7 @@ font-family: font-family: 'Abel', sans-serif;
 - Favorites
   - POST /favorites add a new favorite
   - GET /favorites Retrieve all favorites
-  - GET favorites/:id Retrieve a single favorite
+  - GET /favorites/:id Retrieve a single favorite
   
 - Trails
   - GET /trails get all trails
