@@ -24,6 +24,9 @@ router.post('/', (req, res, next) => {
     .where('email', req.body.email)
     .first()
     .then((user) => {
+      if (req.cookies.token) {
+        res.clearCookie()
+      }
       bcrypt.compare(req.body.password, user.password, (err, result) => {
         if (result) {
           delete user.password
