@@ -48,7 +48,7 @@ router.post('/', (req, res, next) => {
         }
       })
     })
-    .catch((err) => {
+    .catch(() => {
       next({
         status: 400,
         message: 'Bad email or password'
