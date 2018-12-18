@@ -1,5 +1,6 @@
 body {
   font-family: 'Abel', sans-serif;
+  background-color: #1f1f1e;
 }
 
 #banner {
@@ -22,19 +23,26 @@ body {
   height: 18px;
 }
 
-.card {
-  float: left;
-  margin: 2%;
-  width: 230px;
-  height: 360px;
-  border-color: #6a7172;
-  margin-bottom: 4%;
-}
-
 .card-img-top {
   height: 200px;
 }
 
 footer {
   color: white;
+}
+
+.card-body {
+  margin-bottom: 50px;
+  background-color: #2f2f2e;
+  color: white;
+  opacity: 95%;
+}
+.card {
+  float: left;
+  margin: 2%;
+  width: 230px;
+  height: 365px;
+  border-color: #eae1c0;
+  margin-bottom: 4%;
+  background-color: #2f2f2e;
 }
