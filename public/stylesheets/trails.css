@@ -58,3 +58,7 @@ footer {
 .favorite {
   background-color: #dd745f;
 }
+
+.modal-body {
+  color: black;
+}

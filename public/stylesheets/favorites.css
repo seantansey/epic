@@ -46,3 +46,17 @@ footer {
   margin-bottom: 4%;
   background-color: #2f2f2e;
 }
+
+.favorite {
+  background-color: #dd745f;
+}
+
+#exampleModalLabel {
+  background-color: #dd745f;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.modal-body {
+  color: black;
+}
