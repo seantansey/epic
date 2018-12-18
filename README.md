@@ -48,17 +48,16 @@ font-family: font-family: 'Abel', sans-serif;
 ### Server Routes Plan (example below, only needed for Q2/Q3/Q4 Projects)
 
 - Users
-  - POST /api/signup Create a new user
-  - POST /api/login User login
-  - POST /api/logout logout user
-  - GET /api/users/:id Retrieve user information
+  - POST /users Create a new user
+  - POST /token User login
+  - DELTE /token logout user
+  - GET /users/:id Retrieve user information
 
 - Favorites
-  - POST /api/favorites add a new favorite
-  - GET /api/favorites Retrieve all favorites
-  - GET /api/favorites/:id Retrieve a single favorite
-  - DELETE /api/favorites/:id Delete an favorite
-
+  - POST /favorites add a new favorite
+  - GET /favorites Retrieve all favorites
+  - GET favorites/:id Retrieve a single favorite
+  
 - Trails
-  - GET /api/trails get all trails
-  - GET /api/trails/:id get a single trail
+  - GET /trails get all trails
+  - GET /trails/:id get a single trail
