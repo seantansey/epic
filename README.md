@@ -61,3 +61,6 @@ font-family: font-family: 'Abel', sans-serif;
 - Trails
   - GET /trails get all trails
   - GET /trails/:id get a single trail
+
+### Deployed Link
+https://epic-bike-app.herokuapp.com/
