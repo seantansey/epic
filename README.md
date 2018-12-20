@@ -8,7 +8,7 @@ EPIC ride finder gives you the beta you need to realize your mountain biking buc
 
 EPIC Ride Finder © Hand Crafted in Boulder, Colorado. 2018 all rights reserved. 
 
-[Deployed link](http://google.com/)
+[Deployed link](https://epic-bike-app.herokuapp.com/trails.html)
 
 ### Wireframes
 [Wireframes](https://wireframe.cc/BsPt8U)
