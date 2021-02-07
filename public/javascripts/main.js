@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h6>Difficulty:<span> ${data.data[x].difficulty}<span></h6>
                     <h6>Summary:<span> ${data.data[x].summary}<span></h6>
                     <h6>Stars:<span> ${data.data[x].stars}<span></h6>
-                    <h6>URL: <span><a href="${data.data[x].url}">Click Here</a><span></h6>
+                    <h6>URL: <span><a href="${data.data[x].url}" target='_blank'>Click Here</a><span></h6>
                     <h6>Location:<span> ${data.data[x].location}<span></h6>
                     <h6>Length:<span> ${data.data[x].length}<span></h6>
                     <h6>Ascent:<span> ${data.data[x].ascent}<span></h6>
