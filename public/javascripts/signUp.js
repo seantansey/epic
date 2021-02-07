@@ -6,7 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     user.email = loginForm.inputEmail.value
     user.password = loginForm.inputPassword.value
     createNewUser(user).then(data => {
-      window.location.href = 'login.html'
+      console.log(data)
+      //window.location.href = 'login.html'
+      if (data.status === 200) {
+        loginUser(user).then(login => {
+          if (login.status === 200) {
+            window.location.href = 'trails.html'
+          }
+        })
+      }
+      else {
+        console.log('server error, please try again')
+      }
     })
   })
 
